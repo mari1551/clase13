@@ -1,0 +1,31 @@
+<!-- Completar el código JavaScript proporcionado para que se añadan nuevos elementos a la lista cada vez que se pulsa sobre el botón. Utilizar las funciones DOM para crear nuevos nodos y añadirlos a la lista existente. Al igual que sucede en el ejercicio anterior. En este ejercicio, sólo se debe saber que al hacer click sobre el botón, se ejecuta la función llamada anade(). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script type="text/javascript">
+        function anade() {
+            var item = document.createElement("li");
+            var ingreso = prompt("Ingresa una texto para agregar a la lista:");            
+            var texto=document.createTextNode(ingreso);
+            item.appendChild(texto);
+            var lista = document.getElementById("lista");
+            lista.appendChild(item);
+        }
+    </script>
+    </head>
+    <body>
+        <ul id="lista">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetuer adipiscing elit</li>
+            <li>Sed mattis enim vitae orci</li>
+            <li>Phasellus libero</li>
+            <li>Maecenas nisl arcu</li>
+        </ul>
+        <input type="button" value="Añadir elemento" onclick="anade();">
+        <!-- if (!window.__cfRLUnblockHandlers) return false; -->
+    
+    </body>
+</html>
